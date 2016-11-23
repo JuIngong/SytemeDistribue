@@ -23,6 +23,7 @@ public class ServiceClient implements Runnable {
 
     @Override
     public void run() {
+
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
             PrintWriter out = new PrintWriter(client.getOutputStream());
@@ -50,7 +51,6 @@ public class ServiceClient implements Runnable {
             System.out.println(name + " => Disconnect");
             client.close();
         } catch (IOException e)
-
         {
             e.printStackTrace();
         }
